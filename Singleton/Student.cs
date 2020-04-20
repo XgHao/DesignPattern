@@ -21,6 +21,10 @@ namespace Singleton
         private static volatile Student student = null;
 
         private static object Singleton_Lock = new object();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static Student CreateInstance()
         {
             //如果student == null 则返回new Student()
@@ -34,6 +38,8 @@ namespace Singleton
                     }
                 }
             }
+
+            var tes = student.MemberwiseClone();
 
             return student;
         }
