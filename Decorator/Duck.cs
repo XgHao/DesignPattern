@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace Decorator
 {
-    class CatDecorator : Animal
+    public class Duck : Animal
     {
-        private Animal _animal = null;
-
-        public CatDecorator(Animal animal)
-        {
-            _animal = animal;
-        }
-
         public override void Sound()
         {
-            _animal.Sound();
+            Console.WriteLine("嘎嘎嘎");
         }
     }
 }

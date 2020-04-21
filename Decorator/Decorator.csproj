@@ -45,12 +45,15 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Cat.cs" />
-    <Compile Include="CatDecorator.cs" />
+    <Compile Include="Decorators\LogDecorator.cs" />
+    <Compile Include="Decorators\TimeStampDecorator.cs" />
+    <Compile Include="Duck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

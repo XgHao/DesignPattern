@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Decorator.Decorators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,23 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
-
-            Animal cat = new Cat
+            //首先实现一个具体的猫
+            Animal duck = new Duck
             {
-                FootNum = 4,
+                FootNum = 2,
                 HaveTail = true,
-                Name = "猫"
+                Name = "鸭子"
             };
 
-            //CatDecorator catDecorator = new CatDecorator(cat);
-            //Animal catDecorator = new CatDecorator(cat);
-            cat = new CatDecorator(cat);
+            
+            //再装饰一个日志
+            duck = new LogDecorator(duck);
+            //装饰一个时间戳
+            duck = new TimeStampDecorator(duck);
+
+            duck.Sound();
+
+            Console.Read();
         }
     }
 }
