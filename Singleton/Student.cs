@@ -20,7 +20,7 @@ namespace Singleton
 
         private static volatile Student student = null;
 
-        private static object Singleton_Lock = new object();
+        private static readonly object Singleton_Lock = new object();
         /// <summary>
         /// 
         /// </summary>
